@@ -1,0 +1,20 @@
+<?php
+/** @var $viewModel \KA\CountdownTimer\ViewModel\Countdowntimer */
+$viewModel = $block->getViewModel();
+?>
+<!--todo use js lib-->
+<!--todo change phrase to "Order in hours hrs mins mins for the next dispatch period"-->
+
+<div id="countdowntimer"><?= $block->escapeHtml($viewModel->getCountdowntimer()); ?></div>
+
+<script type="text/x-magento-init">
+{
+    "#countdowntimer": {
+        "countdowntimer": {
+        <?php if (($block->escapeHtml($viewModel->getCountdowntimer()))): ?>
+            "countdowndate": "<?= $block->escapeHtml($viewModel->getCountdowntimer()); ?>"
+        <?php endif; ?>
+        }
+    }
+}
+</script>

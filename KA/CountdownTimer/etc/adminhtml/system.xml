@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+<!--        todo change Admin Path to CTI Digital → Despatch Countdown Timer-->
+        <section id="catalog">
+            <group id="countdown_timer" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Countdown Timer on Product Page</label>
+                <field id="countdown_timer_on" translate="label comment" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Display Countdown Timer</label>
+                    <comment>Whether the countdown timer is enabled for a specific website</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="monday_time" translate="label" type="time" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Monday</label>
+                    <comment>The cut off time for delivery on a Monday in the format HH:MM. Leave blank to ignore</comment>
+                </field>
+                <field id="tuesday_time" translate="label" type="time" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Tuesday</label>
+                    <comment>The cut off time for delivery on a Tuesday in the format HH:MM. Leave blank to ignore</comment>
+                </field>
+                <field id="wednesday_time" translate="label" type="time" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Wednesday</label>
+                    <comment>The cut off time for delivery on a Wednesday in the format HH:MM. Leave blank to ignore</comment>
+                </field>
+                <field id="thursday_time" translate="label" type="time" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Thursday</label>
+                    <comment>The cut off time for delivery on a Thursday in the format HH:MM. Leave blank to ignore</comment>
+                </field>
+                <field id="friday_time" translate="label" type="time" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Friday</label>
+                    <comment>The cut off time for delivery on a Friday in the format HH:MM. Leave blank to ignore</comment>
+                </field>
+                <field id="saturday_time" translate="label" type="time" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Saturday</label>
+                    <comment>The cut off time for delivery on a Saturday in the format HH:MM. Leave blank to ignore</comment>
+                </field>
+                <field id="sunday_time" translate="label" type="time" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sunday</label>
+                    <comment>The cut off time for delivery on a Sunday in the format HH:MM. Leave blank to ignore</comment>
+                </field>
+            </group>
+            <!--todo add days options as  dynamic fields -->
+            <!--todo think over how to group the days options fields-->
+            <!--todo add type handler to use time without seconds-->
+        </section>
+    </system>
+</config>
